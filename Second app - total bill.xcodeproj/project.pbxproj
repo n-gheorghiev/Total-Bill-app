@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F47DA7DF2A82BB0900C2AAA5 /* TipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DA7DE2A82BB0900C2AAA5 /* TipsCollectionViewCell.swift */; };
+		F47DA7E52A82BCE100C2AAA5 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DA7E42A82BCE100C2AAA5 /* TipsView.swift */; };
 		F4CEBBD62A828EFD008C7CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEBBD52A828EFD008C7CE4 /* AppDelegate.swift */; };
 		F4CEBBD82A828EFD008C7CE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEBBD72A828EFD008C7CE4 /* SceneDelegate.swift */; };
 		F4CEBBDA2A828EFD008C7CE4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEBBD92A828EFD008C7CE4 /* MainViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F47DA7DE2A82BB0900C2AAA5 /* TipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F47DA7E42A82BCE100C2AAA5 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		F4CEBBD22A828EFD008C7CE4 /* Second app - total bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Second app - total bill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CEBBD52A828EFD008C7CE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CEBBD72A828EFD008C7CE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F47DA7E02A82BB2400C2AAA5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F4CEBBD52A828EFD008C7CE4 /* AppDelegate.swift */,
+				F4CEBBD72A828EFD008C7CE4 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F47DA7E12A82BB3A00C2AAA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4CEBBD92A828EFD008C7CE4 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F47DA7E22A82BB4A00C2AAA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F47DA7E32A82BB6B00C2AAA5 /* Cells */,
+				F4CEBBE92A829B9B008C7CE4 /* TotalBillView.swift */,
+				F4CEBBEB2A82A4C9008C7CE4 /* PersonsView.swift */,
+				F47DA7E42A82BCE100C2AAA5 /* TipsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F47DA7E32A82BB6B00C2AAA5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F47DA7DE2A82BB0900C2AAA5 /* TipsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F4CEBBC92A828EFD008C7CE4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +98,9 @@
 		F4CEBBD42A828EFD008C7CE4 /* Second app - total bill */ = {
 			isa = PBXGroup;
 			children = (
-				F4CEBBD52A828EFD008C7CE4 /* AppDelegate.swift */,
-				F4CEBBD72A828EFD008C7CE4 /* SceneDelegate.swift */,
-				F4CEBBD92A828EFD008C7CE4 /* MainViewController.swift */,
-				F4CEBBE92A829B9B008C7CE4 /* TotalBillView.swift */,
-				F4CEBBEB2A82A4C9008C7CE4 /* PersonsView.swift */,
+				F47DA7E02A82BB2400C2AAA5 /* Application */,
+				F47DA7E12A82BB3A00C2AAA5 /* Controller */,
+				F47DA7E22A82BB4A00C2AAA5 /* Views */,
 				F4CEBBDE2A828EFE008C7CE4 /* Assets.xcassets */,
 				F4CEBBE02A828EFE008C7CE4 /* LaunchScreen.storyboard */,
 				F4CEBBE32A828EFE008C7CE4 /* Info.plist */,
@@ -143,6 +181,8 @@
 				F4CEBBEA2A829B9B008C7CE4 /* TotalBillView.swift in Sources */,
 				F4CEBBEC2A82A4C9008C7CE4 /* PersonsView.swift in Sources */,
 				F4CEBBDA2A828EFD008C7CE4 /* MainViewController.swift in Sources */,
+				F47DA7DF2A82BB0900C2AAA5 /* TipsCollectionViewCell.swift in Sources */,
+				F47DA7E52A82BCE100C2AAA5 /* TipsView.swift in Sources */,
 				F4CEBBD62A828EFD008C7CE4 /* AppDelegate.swift in Sources */,
 				F4CEBBD82A828EFD008C7CE4 /* SceneDelegate.swift in Sources */,
 			);

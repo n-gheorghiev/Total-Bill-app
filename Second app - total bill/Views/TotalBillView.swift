@@ -9,6 +9,8 @@ import UIKit
 
 class TotalBillView: UIView {
     
+    // MARK: - Свойства
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Total Bill"
@@ -23,6 +25,7 @@ class TotalBillView: UIView {
         textField.backgroundColor = #colorLiteral(red: 0.9300000072, green: 0.9300000072, blue: 0.9300000072, alpha: 1)
         textField.layer.cornerRadius = 10
         textField.textColor = .black
+        textField.tintColor = #colorLiteral(red: 0.6390794516, green: 0.2492685616, blue: 0.6254444718, alpha: 1)
         textField.font = UIFont(name: "Avenir Next", size: 48)
         textField.textAlignment = .center
         textField.keyboardType = .numberPad
@@ -40,6 +43,8 @@ class TotalBillView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Методы
     
     func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
