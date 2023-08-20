@@ -30,10 +30,11 @@ class PersonsView: UIView {
     
     lazy var minusButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("−", for: .normal)
+//        button.setTitle("−", for: .normal)
         button.tintColor = #colorLiteral(red: 0.3764705882, green: 0.4196078431, blue: 0.4901960784, alpha: 1)
         button.isEnabled = false
-        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+//        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.setImage(UIImage(systemName: "minus"), for: .normal)
         button.addTarget(self, action: #selector(minusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -41,9 +42,10 @@ class PersonsView: UIView {
     
     lazy var plusButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("+", for: .normal)
+//        button.setTitle("+", for: .normal)
         button.tintColor = #colorLiteral(red: 0.3764705882, green: 0.4196078431, blue: 0.4901960784, alpha: 1)
-        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+//        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -51,7 +53,7 @@ class PersonsView: UIView {
     
     let counterLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
+        label.text = "2"
         label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont(name: "Avenir Next", size: 48)
@@ -59,7 +61,7 @@ class PersonsView: UIView {
         return label
     }()
     
-    var counter = 0
+    var counter = 2
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,6 +72,13 @@ class PersonsView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        titleLabel.font = UIFont(name: "Avenir Next", size: frame.width / 26.7)
+        counterLabel.font = UIFont(name: "Avenir Next", size: frame.height / 2.6)
     }
     
     // MARK: - Методы
@@ -88,7 +97,7 @@ class PersonsView: UIView {
         counter -= 1
         counterLabel.text = "\(counter)"
         
-        if counter == 0 {
+        if counter <= 2 {
             minusButton.isEnabled = false
         }
     }
@@ -103,11 +112,12 @@ class PersonsView: UIView {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            titleLabel.heightAnchor.constraint(equalToConstant: 20),
             
             backgroundGrayView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             backgroundGrayView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundGrayView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            backgroundGrayView.heightAnchor.constraint(equalToConstant: 100),
+            backgroundGrayView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             
             minusButton.topAnchor.constraint(equalTo: backgroundGrayView.topAnchor, constant: 0),
             minusButton.leadingAnchor.constraint(equalTo: backgroundGrayView.leadingAnchor, constant: 0),
